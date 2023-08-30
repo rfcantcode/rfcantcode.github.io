@@ -17,12 +17,12 @@ bandit5 / lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR<br>
 bandit6 / P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU<br>
 bandit7 / z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S<br>
 bandit8 / TESKZC0XvTetK0S9xNwm25STk5iWrBvP<br>
-<code>
-data = [line.strip() for line in open("data.txt", 'r')]
-for x in range(len(data)):
-    print(x,str(data[x]))
-    data.count(data[x])
-</code>
+<br><code>
+data = [line.strip() for line in open("data.txt", 'r')]<br>
+for x in range(len(data)):<br>
+    print(x,str(data[x]))<br>
+    data.count(data[x])<br>
+</code><br>
 bandit9 / EN632PlfYiZbn3PhVK3XOGSlNInNE00t<br>
 bandit10 / G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s<br>
 bandit11 / 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM<br>
@@ -31,20 +31,20 @@ bandit13 / wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw<br>
 bandit14 / fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq<br>
 bandit15 / jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt<br>
 bandit16 / JQttfApK4SeyHwDlI9SXGR50qclOAil1<br>
-===
-<code>
-import subprocess
-for x in range(31000,32000):
-    print("Trying ",x)
-    subprocess.run(["nc","-w","2","127.0.0.1", str(x)])
-</code>
-ports:
-31046 [n]
-31518 [yes but echo]
-31691 [n]
-31790 [yes]
-31960 [n]
-===
+===<br>
+<br><code>
+import subprocess<br>
+for x in range(31000,32000):<br>
+    print("Trying ",x)<br>
+    subprocess.run(["nc","-w","2","127.0.0.1", str(x)])<br>
+</code><br>
+ports:<br>
+31046 [n]<br>
+31518 [yes but echo]<br>
+31691 [n]<br>
+31790 [yes]<br>
+31960 [n]<br>
+===<br>
 bandit18 / hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg<br>
 bandit19 / awhqfNnAbc1naukrpqDYcF95h7HoMTrC<br>
 bandit20 / VxCazJaVykI6W36BkBU0mJTCM8rR95XT<br>
@@ -52,30 +52,29 @@ bandit21 / NvEJF7oVjkddltPSrdKEFOllh9V1IBcq<br>
 bandit22 / WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff<br>
 bandit23 / QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G<br>
 bandit24 / VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar<br>
-===
-<code>
-x=[]
-host='127.0.0.1'
-port=30002
-p='VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar'
-num=range(999,10000)
-for n in list(range(999,10000)):
-    x.append(f"{p} {str(n)}\r\n")
-
-import socket
-import time
-s=socket.socket()
-s.connect((host, port))
-data=s.recv(1024)
-while data:
-    if b"Wrong" in data:
-        for z in x:
-            s.send(z.encode())
-            print(f"{z} {data}")
-            data=''
-            data=s.recv(1024)
-</code>
-===
+===<br>
+<br><code>
+x=[]<br>
+host='127.0.0.1'<br>
+port=30002<br>
+p='VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar'<br>
+num=range(999,10000)<br>
+for n in list(range(999,10000)):<br>
+    x.append(f"{p} {str(n)}\r\n")<br>
+<br>
+import socket<br>
+s=socket.socket()<br>
+s.connect((host, port))<br>
+data=s.recv(1024)<br>
+while data:<br>
+    if b"Wrong" in data:<br>
+        for z in x:<br>
+            s.send(z.encode())<br>
+            print(f"{z} {data}")<br>
+            data=''<br>
+            data=s.recv(1024)<br>
+</code><br>
+===<br>
 bandit25 / p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d<br>
 bandit26 / c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1<br>
 bandit27 / YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS<br>
