@@ -77,7 +77,7 @@ s=socket.socket()
 s.connect((host, port))
 data=s.recv(1024)
 while data:
-    if b"Wrong" in data:
+    if b"\n" in data:
         for z in x:
             s.send(z.encode())
             print(f"{z} {data}")
