@@ -10,79 +10,91 @@
   <body>
   <b>OverTheWire Bandit</b><br><br>
 
-bandit1 / NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL<br>
-bandit2 / rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi<br>
-bandit3 / aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG<br>
-bandit4 / 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe<br>
-bandit5 / lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR<br>
-bandit6 / P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU<br>
-bandit7 / z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S<br>
-bandit8 / TESKZC0XvTetK0S9xNwm25STk5iWrBvP<br>
-<br><code>
+<table border="1">
+<tbody>
+<tr><td>bandit1</td><td>NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL</td></tr>
+<tr><td>bandit2</td><td>rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi</td></tr>
+<tr><td>bandit3</td><td>aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG</td></tr>
+<tr><td>bandit4</td><td>2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe</td></tr>
+<tr><td>bandit5</td><td>lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR</td></tr>
+<tr><td>bandit6</td><td>P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU</td></tr>
+<tr><td>bandit7</td><td>z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S</td></tr>
+<tr><td>bandit8</td><td>TESKZC0XvTetK0S9xNwm25STk5iWrBvP</td></tr>
+</tbody>
+</table>
+<pre><code>
 data = [line.strip() for line in open("data.txt", 'r')]<br>
 for x in range(len(data)):<br>
     &ensp;&ensp;print(x,str(data[x]))<br>
     &ensp;&ensp;data.count(data[x])<br>
-</code><br>
-bandit9 / EN632PlfYiZbn3PhVK3XOGSlNInNE00t<br>
-bandit10 / G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s<br>
-bandit11 / 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM<br>
-bandit12 / JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv<br>
-bandit13 / wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw<br>
-bandit14 / fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq<br>
-bandit15 / jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt<br>
-bandit16 / JQttfApK4SeyHwDlI9SXGR50qclOAil1<br>
-<br><code>
+</code></pre>
+<table border="1">
+<tbody>
+<tr><td>bandit9</td><td>EN632PlfYiZbn3PhVK3XOGSlNInNE00t</td></tr>
+<tr><td>bandit10</td><td>G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s</td></tr>
+<tr><td>bandit11</td><td>6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM</td></tr>
+<tr><td>bandit12</td><td>JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv</td></tr>
+<tr><td>bandit13</td><td>wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw</td></tr>
+<tr><td>bandit14</td><td>fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq</td></tr>
+<tr><td>bandit15</td><td>jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt</td></tr>
+<tr><td>bandit16</td><td>JQttfApK4SeyHwDlI9SXGR50qclOAil1</td></tr>
+</tbody>
+</table>
+<pre><code>
 import subprocess<br>
 for x in range(31000,32000):<br>
-    &ensp;&ensp;print("Trying ",x)<br>
-    &ensp;&ensp;subprocess.run(["nc","-w","2","127.0.0.1", str(x)])<br>
-</code><br>
-ports:<br>
-31046 [n]<br>
-31518 [yes but echo]<br>
-31691 [n]<br>
-31790 [yes]<br>
-31960 [n]<br>
-<br>
-bandit18 / hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg<br>
-bandit19 / awhqfNnAbc1naukrpqDYcF95h7HoMTrC<br>
-bandit20 / VxCazJaVykI6W36BkBU0mJTCM8rR95XT<br>
-bandit21 / NvEJF7oVjkddltPSrdKEFOllh9V1IBcq<br>
-bandit22 / WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff<br>
-bandit23 / QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G<br>
-bandit24 / VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar<br>
-<br>
-<br><code>
-x=[]<br>
-host='127.0.0.1'<br>
-port=30002<br>
-p='VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar'<br>
-num=range(999,10000)<br>
-for n in list(range(999,10000)):<br>
-    &ensp;x.append(f"{p} {str(n)}\r\n")<br>
-<br>
+    print("Trying ",x)<br>
+    subprocess.run(["nc","-w","2","127.0.0.1", str(x)])<br>
+
+ports:
+31046 [n]
+31518 [yes but echo]
+31691 [n]
+31790 [yes]
+31960 [n]
+</code></pre>
+<table border="1">
+<tbody>
+<tr><td>bandit18</td><td>hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg</td></tr>
+<tr><td>bandit19</td><td>awhqfNnAbc1naukrpqDYcF95h7HoMTrC</td></tr>
+<tr><td>bandit20</td><td>VxCazJaVykI6W36BkBU0mJTCM8rR95XT</td></tr>
+<tr><td>bandit21</td><td>NvEJF7oVjkddltPSrdKEFOllh9V1IBcq</td></tr>
+<tr><td>bandit22</td><td>WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff</td></tr>
+<tr><td>bandit23</td><td>QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G</td></tr>
+<tr><td>bandit24</td><td>VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar</td></tr>
+</tbody></table>
+<pre><code>
+x=[]
+host='127.0.0.1'
+port=30002
+p='VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar'
+num=range(999,10000)
+for n in list(range(999,10000)):
+    &ensp;x.append(f"{p} {str(n)}\r\n")
+
 import socket<br>
-s=socket.socket()<br>
-s.connect((host, port))<br>
-data=s.recv(1024)<br>
-while data:<br>
-    if b"Wrong" in data:<br>
-        for z in x:<br>
-            s.send(z.encode())<br>
-            print(f"{z} {data}")<br>
-            data=''<br>
-            data=s.recv(1024)<br>
-</code><br>
-===<br>
-bandit25 / p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d<br>
-bandit26 / c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1<br>
-bandit27 / YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS<br>
-bandit28 / AVanL161y9rsbcJIsFHuw35rjaOM19nR<br>
-bandit29 / tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S<br>
-bandit30 / xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS<br>
-bandit31 / OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt<br>
-bandit32 / rmCBvG56y58BXzv98yZGdO7ATVL5dW8y<br>
-bandit33 / odHo63fHiFqcWWJG9rLiLDtPm45KzUKy<br>
+s=socket.socket()
+s.connect((host, port))
+data=s.recv(1024)
+while data:
+    if b"Wrong" in data:
+        for z in x:
+            s.send(z.encode())
+            print(f"{z} {data}")
+            data=''
+            data=s.recv(1024)
+</code></pre>
+<table border="1">
+<tbody>
+<tr><td>bandit25</td><td>p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d</td></tr>
+<tr><td>bandit26</td><td>c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1</td></tr>
+<tr><td>bandit27</td><td>YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS</td></tr>
+<tr><td>bandit28</td><td>AVanL161y9rsbcJIsFHuw35rjaOM19nR</td></tr>
+<tr><td>bandit29</td><td>tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S</td></tr>
+<tr><td>bandit30</td><td>xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS</td></tr>
+<tr><td>bandit31</td><td>OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt</td></tr>
+<tr><td>bandit32</td><td>rmCBvG56y58BXzv98yZGdO7ATVL5dW8y</td></tr>
+<tr><td>bandit33</td><td>odHo63fHiFqcWWJG9rLiLDtPm45KzUKy</td></tr>
+</tbody></table>
 </body>
 </html>
